@@ -1,0 +1,25 @@
+Link: https://github.com/hyperledger-labs/minifabric
+
+mkdir %userprofile%\mywork & cd %userprofile%\mywork & curl -o minifab.cmd -sL https://tinyurl.com/y3gupzby
+./minifab up
+
+
+________________________________________COMANDOS MARIO_________________________________________________________________________
+
+Levantar a Rede:
+./minifab up -o org.com..br -e 7050 -s couchdb -n chaincodejoao -l node -p '"InitLedger","init00","init","init","init","init"'
+
+Gerar arquivo de configuração do channel:
+./minifab channelquery
+
+Atualizar as configurações do Channel:
+./minifab channelsign, channelupdate
+
+Atualizar as config
+./minifab discover
+
+
+4 - Se tudo ocorrer bem, a rede estará UP e o chaincode instalado, sendopossível agora cadastrar e pesquisar os ativos:
+
+./minifab invoke -n chaincodejoao -p ' "Cadastrar","id_01","Joao Guedes","71999999999","Rua do IFBA" '
+./minifab invoke -n chaincodejoao -p ' "PesquisarPorId","id_01" '
