@@ -1,0 +1,194 @@
+{
+  "allcas": [
+    {
+      "adminPassword": "adminpw",
+      "command": "fabric-ca-server start -b admin:adminpw --cfg.affiliations.allowremove --cfg.identities.allowremove",
+      "fullname": "ca1.org0.example.com",
+      "mspid": "org0-example-com",
+      "name": "ca1",
+      "oport": "8050",
+      "org": "org0.example.com",
+      "port": "7050",
+      "portmap": "-p 7050:7054 -p 8050:9443",
+      "type": "ca",
+      "url": "192.168.1.3"
+    },
+    {
+      "adminPassword": "adminpw",
+      "command": "fabric-ca-server start -b admin:adminpw --cfg.affiliations.allowremove --cfg.identities.allowremove",
+      "fullname": "ca1.org1.example.com",
+      "mspid": "org1-example-com",
+      "name": "ca1",
+      "oport": "8051",
+      "org": "org1.example.com",
+      "port": "7051",
+      "portmap": "-p 7051:7054 -p 8051:9443",
+      "type": "ca",
+      "url": "192.168.1.3"
+    }
+  ],
+  "allcouchdbs": [
+    {
+      "adminPassword": "adminpw",
+      "fullname": "peer1.org0.example.com.couchdb",
+      "mspid": "org0-example-com",
+      "name": "peer1.couchdb",
+      "org": "org0.example.com",
+      "port": "7056",
+      "portmap": "-p 7056:5984",
+      "type": "couchdb",
+      "url": "192.168.1.3"
+    },
+    {
+      "adminPassword": "adminpw",
+      "fullname": "peer2.org0.example.com.couchdb",
+      "mspid": "org0-example-com",
+      "name": "peer2.couchdb",
+      "org": "org0.example.com",
+      "port": "7057",
+      "portmap": "-p 7057:5984",
+      "type": "couchdb",
+      "url": "192.168.1.3"
+    },
+    {
+      "adminPassword": "adminpw",
+      "fullname": "peer1.org1.example.com.couchdb",
+      "mspid": "org1-example-com",
+      "name": "peer1.couchdb",
+      "org": "org1.example.com",
+      "port": "7058",
+      "portmap": "-p 7058:5984",
+      "type": "couchdb",
+      "url": "192.168.1.3"
+    },
+    {
+      "adminPassword": "adminpw",
+      "fullname": "peer2.org1.example.com.couchdb",
+      "mspid": "org1-example-com",
+      "name": "peer2.couchdb",
+      "org": "org1.example.com",
+      "port": "7059",
+      "portmap": "-p 7059:5984",
+      "type": "couchdb",
+      "url": "192.168.1.3"
+    }
+  ],
+  "allorderers": [
+    {
+      "fullname": "orderer1.example.com",
+      "mspid": "example-com",
+      "name": "orderer1",
+      "oport": "8060",
+      "org": "example.com",
+      "port": "7060",
+      "portmap": "-p 7060:7050 -p 8060:7060",
+      "type": "orderer",
+      "url": "192.168.1.3"
+    },
+    {
+      "fullname": "orderer2.example.com",
+      "mspid": "example-com",
+      "name": "orderer2",
+      "oport": "8061",
+      "org": "example.com",
+      "port": "7061",
+      "portmap": "-p 7061:7050 -p 8061:7060",
+      "type": "orderer",
+      "url": "192.168.1.3"
+    },
+    {
+      "fullname": "orderer3.example.com",
+      "mspid": "example-com",
+      "name": "orderer3",
+      "oport": "8062",
+      "org": "example.com",
+      "port": "7062",
+      "portmap": "-p 7062:7050 -p 8062:7060",
+      "type": "orderer",
+      "url": "192.168.1.3"
+    }
+  ],
+  "allorgs": [
+    "example.com",
+    "org0.example.com",
+    "org1.example.com"
+  ],
+  "allpeers": [
+    {
+      "adminPassword": "adminpw",
+      "fullname": "peer1.org0.example.com",
+      "mspid": "org0-example-com",
+      "name": "peer1",
+      "oport": "8052",
+      "org": "org0.example.com",
+      "port": "7052",
+      "portmap": "-p 7052:7051 -p 8052:7061",
+      "type": "peer",
+      "url": "192.168.1.3"
+    },
+    {
+      "adminPassword": "adminpw",
+      "fullname": "peer2.org0.example.com",
+      "mspid": "org0-example-com",
+      "name": "peer2",
+      "oport": "8053",
+      "org": "org0.example.com",
+      "port": "7053",
+      "portmap": "-p 7053:7051 -p 8053:7061",
+      "type": "peer",
+      "url": "192.168.1.3"
+    },
+    {
+      "adminPassword": "adminpw",
+      "fullname": "peer1.org1.example.com",
+      "mspid": "org1-example-com",
+      "name": "peer1",
+      "oport": "8054",
+      "org": "org1.example.com",
+      "port": "7054",
+      "portmap": "-p 7054:7051 -p 8054:7061",
+      "type": "peer",
+      "url": "192.168.1.3"
+    },
+    {
+      "adminPassword": "adminpw",
+      "fullname": "peer2.org1.example.com",
+      "mspid": "org1-example-com",
+      "name": "peer2",
+      "oport": "8055",
+      "org": "org1.example.com",
+      "port": "7055",
+      "portmap": "-p 7055:7051 -p 8055:7061",
+      "type": "peer",
+      "url": "192.168.1.3"
+    }
+  ],
+  "caorgs": [
+    "org0.example.com",
+    "org1.example.com"
+  ],
+  "console_port": "7066",
+  "explorer_port": "7064",
+  "ordererorgs": [
+    "example.com"
+  ],
+  "orgattrs": {
+    "example.com": {
+      "certpath": "ordererOrganizations",
+      "mspid": "example-com"
+    },
+    "org0.example.com": {
+      "certpath": "peerOrganizations",
+      "mspid": "org0-example-com"
+    },
+    "org1.example.com": {
+      "certpath": "peerOrganizations",
+      "mspid": "org1-example-com"
+    }
+  },
+  "peerorgs": [
+    "org0.example.com",
+    "org1.example.com"
+  ],
+  "portainer_port": "7065"
+}
