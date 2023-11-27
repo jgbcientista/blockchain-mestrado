@@ -7,7 +7,7 @@ mkdir %userprofile%\mywork & cd %userprofile%\mywork & curl -o minifab.cmd -sL h
 ________________________________________COMANDOS MARIO_________________________________________________________________________
 
 Levantar a Rede:
-./minifab up -o org.com..br -e 7050 -s couchdb -n chaincodejoao -l node -p '"InitLedger","init00","init","init","init","init"'
+./minifab up -o org.com.br -e 7050 -s couchdb -n chaincodejoao -l node -p '"InitLedger","init00","init","init","init","init"'
 
 Gerar arquivo de configuração do channel:
 ./minifab channelquery
@@ -23,3 +23,10 @@ Atualizar as config
 
 ./minifab invoke -n chaincodejoao -p ' "Cadastrar","id_01","Joao Guedes","71999999999","Rua do IFBA" '
 ./minifab invoke -n chaincodejoao -p ' "PesquisarPorId","id_01" '
+
+
+Ajsutes a fazer:
+--Obs: Tabela de tb_aparelho_ativo deve constar todos tokens enviados pelo cpf/cnpj e flag (caso envie um desativado, deve update para ativar)
+-- na tabela tb_historico_aparelho_ativo, deve gerar dois registros: inclusão de inclusão ou alteração (o de inlusão passa a ser ativo)
+-- criar mais uma coluna na tabela de tb_historico_aparelho_ativo, com "tipo de operação" - I- Inclusão, A- Alteração, E-Exclusão.
+-- Investigar mudança de telefone por CPF
